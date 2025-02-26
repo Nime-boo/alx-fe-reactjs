@@ -1,13 +1,11 @@
-import React from "react";
-
-const MainContent = () => {
+function MainContent() {
   return (
-    <main style={{ padding: "20px", backgroundColor: "#f4f4f4", borderRadius: "10px" }}>
-      <p style={{ fontSize: "1.2rem", textAlign: "justify", color: "grey" }}>
-        Welcome to my favorite cities page. Here, you will find details about some of the most beautiful places in the world!
-      </p>
+    <main style={{ padding: "20px", textAlign: "center" }}>
+      <h2>Welcome to My Favorite Cities</h2>
+      <p>I love to visit New York, Paris, and Tokyo.</p>
     </main>
   );
-};
+}
 
 export default MainContent;
+
