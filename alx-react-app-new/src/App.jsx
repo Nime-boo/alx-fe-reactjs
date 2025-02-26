@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import UserProfile from './components/UserProfile';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
@@ -7,10 +7,9 @@ import WelcomeMessage from './components/WelcomeMessage';
 import reactLogo from './assets/react.svg';
 import viteLogo from "./assets/vite.svg";
 import './App.css';
+import Counter from './components/Counter';  // Import Counter component
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="app-container">
       {/* Header and Main Content */}
@@ -29,14 +28,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-
+      
       {/* Counter Section */}
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(count + 1)}>Count is {count}</button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <Counter /> {/* Replaced previous count button with the Counter component */}
       </div>
 
       <p className="read-the-docs">
