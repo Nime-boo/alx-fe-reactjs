@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import UserContext from './components/UserContext';
+import { UserContext } from './components/UserContext'; // Correct import
 import ProfilePage from './components/ProfilePage';
-import UserProfile from './components/UserProfile';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
@@ -14,7 +13,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   // User data stored in context
-  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+  const userData = { 
+   name: "Jane Doe", 
+   email: "jane.doe@example.com",
+   age: 30, 
+   bio: "Software Engineer & Tech Enthusiast" 
+  };
 
   return (
     <UserContext.Provider value={userData}>
@@ -25,9 +29,9 @@ function App() {
       </div>
       <div>
         <WelcomeMessage />
-        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+        {/* Remove props and let UserProfile consume Context */}
+        <ProfilePage />
       </div>
-      <ProfilePage />  {/* <-- Injected ProfilePage, now using Context API */}
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

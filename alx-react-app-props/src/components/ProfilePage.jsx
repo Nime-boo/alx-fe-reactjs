@@ -1,12 +1,12 @@
 import UserInfo from './UserInfo';
 
-function ProfilePage() {
+const ProfilePage = () => {
   return (
     <div>
-      <h2>Profile Page</h2>
+      <h1>Profile Page</h1>
       <UserInfo />
     </div>
   );
-}
+};
 
 export default ProfilePage;
