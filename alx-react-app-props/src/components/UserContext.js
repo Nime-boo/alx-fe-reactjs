@@ -7,3 +7,5 @@ export const UserContext = createContext({
   age: null,
   bio: ""
 });
+
+export default UserContext;
